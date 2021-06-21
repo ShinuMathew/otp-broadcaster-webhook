@@ -16,7 +16,7 @@ app.use('/otp-broadcaster', OTPBroadcasterRouter)
 
 app.get("/", (req, res) => {
     res.json({
-        "status" : "SUCCESS"
+        "status" : "SUCCESS! App started successfully"
     })
 })
 
