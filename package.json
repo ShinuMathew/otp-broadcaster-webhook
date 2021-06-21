@@ -4,7 +4,8 @@
   "description": "Webhook to receive OTP details from otp-broadcaster android app front",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js --db_type=remote"
   },
   "author": "",
   "license": "ISC",
