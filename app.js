@@ -2,11 +2,13 @@ const Express = require('express'),
     joi = require('joi'),
     cors = require('cors'),
     bodyParser = require('body-parser'),
-    OTPBroadcasterRouter = require('./lib/routes/otp-broadcaster');
+    OTPBroadcasterRouter = require('./lib/routes/otp-broadcaster'),
+    logger = require('./helpers/logger');
 
 const app = Express();
 const PORT = 3000 || process.env.PORT
 
+logger.info("Registering middleware")
 app.use(bodyParser.json());
 app.use(cors())
 
