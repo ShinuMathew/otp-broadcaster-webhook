@@ -5,10 +5,19 @@ const Express = require('express'),
     OTPBroadcasterRouter = require('./lib/routes/otp-broadcaster');
 
 const app = Express();
+const PORT = 3000 || process.env.PORT
 
 app.use(bodyParser.json());
 app.use(cors())
 
 app.use('/otp-broadcaster', OTPBroadcasterRouter)
 
-app.listen(3000);
+app.get("/", (req, res) => {
+    res.json({
+        "status" : "SUCCESS"
+    })
+})
+
+app.listen(PORT, () => {
+    logger.info(`Server started at Port : ${PORT}`)
+});
